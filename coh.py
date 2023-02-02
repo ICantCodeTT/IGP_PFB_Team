@@ -14,7 +14,6 @@ def coh_function():
         reader = csv.reader(file)
         next(reader) # skip header
 
-
         cashonhand = 0 # Creation of needed variables
         row_counter = 0
         check = 0
