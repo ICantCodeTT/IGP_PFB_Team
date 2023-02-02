@@ -23,3 +23,11 @@ def coh_function():
             if int(row[1]) > cashonhand: # If int in row[1] is greater than cashonhand, it equals to cashonhand
                 cashonhand = int(row[1])
                 check += 1 # check by counting if all the rows is greater than cashonhand
+            else: 
+                # Append all the days that are lower than the previous days
+                data_to_return.append(f"[CASH DEFECIT] DAY: {row[0]}, AMOUNT: USD{cashonhand - int(row[1])}")
+                cashonhand = int(row[1])
+        # Only if check and row_counter have the exact final value, it will append "CASH SURPLUS" statement
+        if check == row_counter:
+            data_to_return.append(f"[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY")
+    return data_to_return
