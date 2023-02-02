@@ -28,7 +28,7 @@ def profitloss_function():
                 # Append all the days that are lower than the previous days
                 data_to_return.append(f"[PROFIT DEFECIT] DAY: {row[0]}, AMOUNT: USD{profitloss - int(row[4])}")
                 profitloss = int(row[4])
-        # Only if check and row_counter have the exact final value, it will append "NET PROFIT SURPLUS" statement
+        # Only when check and row_counter have the exact final value, it will append "NET PROFIT SURPLUS" statement
         if check == row_counter: 
             data_to_return.append("[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY")
     return data_to_return
