@@ -1,3 +1,4 @@
+# Import Path and csv
 from pathlib import Path
 import csv
 def profitloss_function():
@@ -11,7 +12,7 @@ def profitloss_function():
 
 # Read the csv file to append profit and quantity from the csv.
     with fp.open(mode="r", encoding="UTF-8", newline="") as file:
-        reader = csv.reader(file)
+        reader = csv.reader(file) # Reading the csv file
         next(reader) # Skip header
 
         # Creation of empty lists to store profitloss, row counter, check and data to return
