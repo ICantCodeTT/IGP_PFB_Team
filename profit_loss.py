@@ -4,6 +4,7 @@ def profitloss_function():
     '''
     This functions runs everything related to "profitloss"
     which includes the return value.
+    Users expect option datatype to be a list
     '''
 # create a file to csv file
     fp = Path(r"C:\IGP_PFB_TeamA\csv_reports\profit-and-loss-usd (Day 48 to 52).csv")
@@ -13,12 +14,13 @@ def profitloss_function():
         reader = csv.reader(file)
         next(reader) # skip header
 
-
+        # creation of empty lists to store profitloss, row counter, check and data to return
         profitloss = 0 # Creation of needed variables 
         row_counter = 0
         check = 0
         data_to_return = []
         
+        # use of FOR loop to iterate over the items in the list
         for row in reader:
             row_counter += 1 
             if int(row[4]) > profitloss: # If int in row[4] is greater than profitloss, it equals to profitloss
@@ -31,6 +33,7 @@ def profitloss_function():
         # Only if check and row_counter have the exact final value, it will append "NET PROFIT SURPLUS" statement
         if check == row_counter: 
             data_to_return.append("[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY")
+    # net profit is then returned to the user after the use of the function
     return data_to_return
 
 
