@@ -38,4 +38,6 @@ def coh_function():
         # "CASH SURPLUS" statement will be appended if check and row_counter have the exact final value
         if check == row_counter:
             data_to_return.append(f"[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY")
+            
+    # Return calculated value
     return data_to_return
