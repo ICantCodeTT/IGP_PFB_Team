@@ -18,3 +18,8 @@ def coh_function():
         row_counter = 0
         check = 0
         data_to_return = []
+     for row in reader:
+            row_counter += 1
+            if int(row[1]) > cashonhand: # If int in row[1] is greater than cashonhand, it equals to cashonhand
+                cashonhand = int(row[1])
+                check += 1 # check by counting if all the rows is greater than cashonhand
