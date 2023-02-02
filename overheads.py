@@ -6,13 +6,13 @@ def overhead_function():
     This functions runs everything related to "overheads"
     which includes the return value.
     '''
-# create a file to csv file
+# Create a file to csv file
     fp = Path(r"C:\IGP_PFB_TeamA\csv_reports\overheads-day-52.csv")
 
-# read the csv file to append profit and quantity from the csv.
+# Read the csv file to append profit and quantity from the csv.
     with fp.open(mode="r", encoding="UTF-8", newline="") as file:
         reader = csv.reader(file)
-        next(reader) # skip header
+        next(reader) # Skip header
 
         overheads = 0.0 # Creation of needed variables 
         category = ""
